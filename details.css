@@ -1,0 +1,446 @@
+:root {
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg_default: #FFFFFF;
+  --bg_body: #F0F9FF;
+  --lines-color: #DDDDDD;
+  --body-text: #333333;
+  --heart-color: #DC143C;
+  --border-radius: 5px;
+  --font-size: 15px;
+  --padding: 20px;
+}
+
+
+
+body.dark-mode {
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg_default: #1A1A1A;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #EDEDED;
+  --heart-color: #DC143C;
+
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--body-text);
+}
+
+
+
+
+/*--------------------------------- part 1 style-----------------------------------------*/
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+  padding: 15px 50px;
+
+}
+
+
+.Title {
+  font-size: var(--font-size);
+  color: var(--brand-primary);
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+/*style for the buttons in the header*/
+header .button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+header .button-container button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: var(--bg_default);
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+  border: 1px solid var(--lines-color);
+}
+
+header .button-container button .icon {
+  width: 15px;
+  height: 15px;
+}
+
+header .button-container button .icon.moon-icon {
+  background-image: url(./assets/dark-moon-outline.svg);
+}
+
+header .button-container button .icon.heart-icon {
+  background-image: url(./assets/dark-heart-outline.svg);
+}
+
+
+
+
+/*-----------------------------------------part2----------------------------------------*/
+.Triangle-Tittle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background-color: var(--bg_default);
+  margin-bottom: 20px;
+}
+
+.triangles-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+/* Styles for .left triangle */
+.blue-left {
+  position: absolute;
+  width: 95vw;
+  height: 60px;
+  background: linear-gradient(to left,
+      var(--brand-primary),
+      var(--brand-secondary));
+  transform: scaleX(-1) scaleY(-1);
+  z-index: 1;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+
+}
+
+/* Styles for .right triangle */
+.green-right {
+  position: absolute;
+  width: 90vw;
+  height: 60px;
+  background-color: var(--brand-secondary);
+  top: 0;
+  right: 0;
+  transform: scaleX(-1) scaleY(-1);
+  clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+
+}
+
+/*-------------------------------------part3='datails'----------------------------------------*/
+
+
+.details-topic {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.893);
+  position: fixed;
+}
+
+.details-topic.topic-definition {
+  padding: 20px 45px 20px 20px;
+  width: 60%;
+}
+
+.details-topic.topic-definition .subtitle {
+  font-size: 15px;
+  color: var(--brand-secondary);
+}
+
+.details-topic.topic-definition h1 {
+  padding: 3px 0;
+  color: white;
+}
+
+.details-topic.topic-definition .review-stars {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.details-topic.topic-definition p {
+  padding-top: 24px;
+  color: white;
+}
+
+.details-topic.recomand-card {
+  position: absolute;
+  top: 35px;
+  right: 250px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.092);
+  padding: 2px;
+}
+
+.details-topic.recomand-card .recomand-image {
+  background-image: url(./assets/cross-browser.jpeg);
+  width: 300px;
+  height: 170px;
+  background-size: contain;
+}
+
+.details-topic.recomand-card .author {
+  padding: 15px 15px 0 15px;
+  font-weight: 700;
+  color: #000;
+}
+
+.details-topic.recomand-card .author span {
+  font-weight: 400;
+  color: #000;
+}
+
+.details-topic.recomand-card .author a {
+  color: #0768ac;
+}
+
+.details-topic.recomand-card .favorite-container {
+  border: 1px solid #ededed;
+  margin: 10px 15px 15px 15px;
+  padding: 20px 20px 10px 20px;
+}
+
+.details-topic.recomand-card .favorite-container.interested {
+  font-size: 16px;
+  color: #000;
+}
+
+.details-topic.recomand-card .favorite-container button {
+  cursor: pointer;
+  background-color: var(--brand-secondary);
+  padding: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.details-topic.recomand-card .favorite-container button .btn-text {
+  font-size: 20px;
+  color: white;
+}
+
+.details-topic.recomand-card .favorite-container button .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.details-topic.recomand-card .favorite-container.unlimited-credits {
+  font-size: var(--subtitle-font-size);
+  text-align: center;
+  color: #dddddd;
+}
+
+.Html-topics {
+  background-color: var(--bg_body);
+  padding: 40px 250px;
+  min-height: calc(100vh - 458px);
+}
+
+.Html-topics-list {
+  border: 1px solid var(--lines-color);
+  width: fit-content;
+  background-color: var(--bg_default);
+}
+
+.Html-topics-list h1 {
+  padding: 20px 120px 20px 20px;
+}
+
+.Html-topics-list .sub-topic {
+  display: flex;
+  gap: 15px;
+  padding: 20px 120px 20px 20px;
+  border-top: 1px solid var(--lines-color);
+}
+
+.Html-topics-list .sub-topic div {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.Html-topics-list .sub-topic .icon {
+  width: 25px;
+  height: 25px;
+}
+
+/*------------------part4---------------------------*/
+#favourite-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg_default);
+  padding: 15px 50px;
+  z-index: 20;
+  box-shadow: 0 4px 6px var(--lines-color);
+
+}
+
+#favourite-container .fav-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fav-cards-container {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+
+}
+
+#favourite-container .stars {
+
+  display: flex;
+
+}
+
+/*------------------part5----------------------------*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: var(--padding);
+  background-color: var(--bg_body);
+
+}
+
+
+/* responsive styles */
+@media screen and (max-width: 1024px) {
+  .details-topic.recomand-card {
+    top: 35px;
+    right: 50px;
+  }
+
+  .details-topic.topic-definition {
+    padding: 25px 0 25px 50px;
+  }
+
+  .sub-topics-section {
+    padding: 40px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header .icon-title {
+    display: none;
+  }
+
+  .details-topic.recomand-card {
+    position: static;
+    width: auto;
+  }
+
+  .details-topic.topic-definition {
+    padding: 15px 0 15px 50px;
+    width: 80%;
+  }
+
+  .sub-topics-section {
+    padding: 40px 20px;
+  }
+
+  .sub-topics-list h1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .sub-topics-list .sub-topic {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .sub-topics-list .sub-topic div {
+    font-size: var(--subtitle-font-size);
+  }
+
+  .sub-topics-list .sub-topic .icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .details-topic {
+    padding: 40px 20px;
+  }
+
+  .details-topic.topic-definition {
+    padding: 0;
+    padding-bottom: 40px;
+    width: auto;
+  }
+
+  .details-topic.topic-definition .subtitle {
+    font-size: 13px;
+    margin-top: 0;
+  }
+
+  .details-topic.topic-definition h1 {
+    font-size: 25px;
+  }
+
+  .details-topic.topic-definition .review svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .details-topic.topic-definition p {
+    padding-top: 20px;
+    font-size: 14px;
+  }
+
+  .page-heading-container .page-heading-wrapper {
+    padding: 20px 0px;
+    margin-top: 15px;
+  }
+
+  .page-heading-container .main-title {
+    font-size: 25px;
+  }
+
+  .page-heading-container .subtitle {
+    font-size: var(--subtitle-font-size);
+  }
+
+  .page-heading-container .triangle .blue-triangle,
+  .page-heading-container .triangle .green-triangle {
+    height: 30px;
+  }
+
+  .details-topic.recomand-card .topic-image {
+    width: auto;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .details-topic.recomand-card .favorite-containerbutton {
+    margin: 10px auto;
+  }
+
+  .sub-topics-list {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .details-topic.recomand-card .favorite-containerbutton .button-text {
+    font-size: 18px;
+  }
+}

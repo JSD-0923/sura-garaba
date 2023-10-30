@@ -1,0 +1,503 @@
+:root {
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg_default: #FFFFFF;
+  --bg_body: #F0F9FF;
+  --lines-color: #DDDDDD;
+  --body-text: #333333;
+  --heart-color: #DC143C;
+  --border-radius: 5px;
+  --font-size: 15px;
+  --padding: 20px;
+}
+
+
+
+body.dark-mode {
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg_default: #1A1A1A;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #EDEDED;
+  --heart-color: #DC143C;
+
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--body-text);
+}
+
+
+
+
+/*--------------------------------- part 1 style-----------------------------------------*/
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+  padding: 15px 50px;
+
+}
+
+
+.Title {
+  font-size: var(--font-size);
+  color: var(--brand-primary);
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+/*style for the buttons in the header*/
+header .button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+header .button-container button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: var(--bg_default);
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+  border: 1px solid var(--lines-color);
+}
+
+header .button-container button .icon {
+  width: 15px;
+  height: 15px;
+}
+
+header .button-container button .icon.moon-icon {
+  background-image: url(./assets/dark-moon-outline.svg);
+}
+
+header .button-container button .icon.heart-icon {
+  background-image: url(./assets/dark-heart-outline.svg);
+}
+
+
+
+
+/*-----------------------------------------part2----------------------------------------*/
+.Triangle-Tittle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background-color: var(--bg_default);
+}
+
+.center-text {
+  display: flex;
+  padding: var(--padding);
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.Triangle-Tittle .main-tit {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand-secondary);
+}
+
+.Triangle-Tittle .sub-tit {
+  font-size: var(--subtitle-font-size);
+  color: var(--body-text);
+}
+
+
+.triangles-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+/* Styles for .left triangle */
+.blue-left {
+  position: absolute;
+  width: 95vw;
+  height: 60px;
+  background: linear-gradient(to left,
+      var(--brand-primary),
+      var(--brand-secondary));
+  transform: scaleX(-1) scaleY(-1);
+  z-index: 1;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+
+}
+
+/* Styles for .right triangle */
+.green-right {
+  position: absolute;
+  width: 90vw;
+  height: 60px;
+  background-color: var(--brand-secondary);
+  top: 0;
+  right: 0;
+  transform: scaleX(-1) scaleY(-1);
+  clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+
+}
+
+/* ----------------------------------part3-------------------------------------------- */
+main {
+  background-color: var(--bg_body);
+  width: auto;
+  min-height: calc(100vh - 230px);
+  padding: 20px 50px;
+}
+
+main .search-box {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 7px var(--lines-color);
+  border-radius: 7px;
+}
+
+main .search-box .select-section {
+  display: flex;
+  align-items: center;
+  border-radius: 0 7px 7px 0;
+  background-color: var(--bg_default);
+}
+
+main .search-box .select-section .select-filter {
+  position: relative;
+  padding-right: 10px;
+}
+
+main .search-box .select-section .select-filter::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  background: url("./assets/dark-chevron-down-outline.svg");
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+main .search-box .select-section label {
+  position: absolute;
+  font-size: 12px;
+  top: 5px;
+  left: 16px;
+}
+
+main .search-box .select-section select {
+
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 180px;
+  padding-top: 15px;
+  padding-left: 15px;
+  font-size: 15px;
+  border-left: 1.5px solid var(--lines-color);
+  background-color: var(--bg_default);
+}
+
+main .search-box .search-section {
+  border-radius: 8px 0 0 8px;
+  background-color: var(--bg_default);
+  flex: 2;
+  padding-left: 8px;
+}
+
+main .search-box .search-section .search-input {
+  padding-left: 35px;
+  font-size: 16px;
+  width: 100%;
+  background-image: url("./assets/dark-search-outline.svg");
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  background-size: 15px;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  background-color: var(--bg_default);
+}
+
+/*-----------------------------------part4---------------------------------------------*/
+
+main .cards-container {
+  display: flex;
+  max-width: 1340px;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+
+main .row {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+
+
+}
+
+main .cards-container .card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg_default);
+  flex-basis: calc(20% - 16px);
+  min-width: 233px;
+}
+
+main .cards-container a {
+  text-decoration: none;
+}
+
+main .cards-container .card .topic-image {
+  height: 125px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background-size: 125% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 10px;
+}
+
+
+main .cards-container .card .card-content {
+  padding: var(--padding);
+  font-size: 13px;
+}
+
+main .cards-container .card .card-content .topic-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .cards-container .card .card-content .course-title {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .cards-container .card .card-content .stars {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+main .cards-container .card .card-content .Auth {
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--body-text);
+
+}
+
+/*------------------part5---------------------------*/
+#favourite-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg_default);
+  padding: 15px 50px;
+  z-index: 20;
+  box-shadow: 0 4px 6px var(--lines-color);
+
+}
+
+#favourite-container .fav-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fav-cards-container {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+
+}
+
+#favourite-container .stars {
+
+  display: flex;
+
+}
+
+
+/*------------------part6----------------------------*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: var(--padding);
+  background-color: var(--bg_body);
+
+}
+
+/*Responsive design*/
+/* ----------------------------part 1*--------------------------------------*/
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+    /* Reduce header padding for smaller screens */
+  }
+
+  .Title {
+    font-size: 18px;
+    /* Increase font size for the title on smaller screens */
+  }
+
+  header .button-container {
+    gap: 3px;
+    /* Reduce the gap between buttons on smaller screens */
+  }
+
+  header .button-container button {
+    padding: 3px 8px;
+    /* Reduce button padding on smaller screens */
+  }
+
+  header .button-container button .icon {
+    width: 12px;
+    /* Reduce icon size on smaller screens */
+    height: 12px;
+  }
+}
+
+/* ----------------------------part 2--------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  .Triangle-Tittle {
+    padding: 0 10px;
+    /* Reduce padding for smaller screens */
+  }
+
+  .center-text {
+    margin-top: 10px;
+    /* Reduce margin for smaller screens */
+  }
+
+  .Triangle-Tittle .main-tit {
+    font-size: 16px;
+    /* Reduce font size for smaller screens */
+  }
+
+  .Triangle-Tittle .sub-tit {
+    font-size: 14px;
+    /* Reduce font size for smaller screens */
+  }
+}
+
+/*--------------------------------part3-----------------------------------*/
+@media screen and (max-width: 768px) {
+  main {
+    padding: 20px;
+    /* Adjust main padding for smaller screens */
+  }
+
+  main .search-box {
+    flex-direction: column;
+    /* Stack search-box items vertically on smaller screens */
+  }
+
+  main .search-box .select-section {
+    border-radius: 7px;
+    /* Remove rounded border for select-section */
+    margin-top: 10px;
+    /* Add space between search-box sections */
+  }
+
+  main .search-box .select-section select {
+    width: 100%;
+    /* Make the select element full width */
+  }
+
+  main .search-box .search-section {
+    border-radius: 0;
+    /* Remove border radius for search-section */
+    margin-top: 10px;
+    /* Add space between search-box sections */
+  }
+
+  main .search-box .search-section .search-input {
+    width: 100%;
+    /* Make the input field full width */
+  }
+}
+
+/*-----------------------------------------part4---------------------------------*/
+
+@media screen and (max-width: 768px) {
+  main .cards-container {
+    flex-wrap: wrap;
+    /* Ensure cards wrap to the next line on smaller screens */
+  }
+
+  main .cards-container .card {
+    flex-basis: calc(33.33% - 16px);
+    /* Adjust card width for smaller screens */
+    min-width: 150px;
+    /* Adjust minimum width for cards on smaller screens */
+  }
+
+
+}
+
+/*-------------------------------------part5-------------------------------------*/
+
+@media screen and (max-width: 768px) {
+  #favourite-container {
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  #favourite-container .fav-title {
+    font-size: 16px;
+    /* Reduce font size for smaller screens */
+  }
+
+  .fav-cards-container {
+    flex-direction: column;
+    /* Stack favorite cards vertically on smaller screens */
+    gap: 10px;
+    /* Add space between favorite cards */
+  }
+}
+
+
+/*-------------------------------part6--------------------------------------------*/
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+  }
+}
