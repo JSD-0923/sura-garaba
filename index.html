@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <title>Web Development Languages</title>
+</head>
+
+<body>
+    <!-- Section one -->
+    <header>
+        <div class="Title">
+            Web Topics
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="darkMode()">
+                <div class="icon moon-icon"></div>
+                <div class="Dark Mode">Dark Mode</div>
+            </button>
+            <button type="button" onclick="myFunction()">
+                <div class="icon heart-icon"></div>
+                <div class="Favourites">Favourites</div>
+            </button>
+        </div>
+
+
+        <script>
+            function darkMode() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+
+            }
+        </script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("favourite-container");
+                if (x.style.display === "none") {
+                    x.style.display = "inline";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+        </div>
+
+
+    </header>
+
+    <!-- Part 2: Triangles and Text -->
+    <section class="Triangle-Tittle">
+        <div class="center-text">
+            <div class="main-tit">Welcome to our Website!</div>
+            <div class="sub-tit">We have a new design that's fresh, modern, and easy to use.</div>
+        </div>
+
+        <div class="triangles-container">
+            <div class="blue-left"></div>
+            <div class="green-right"></div>
+        </div>
+    </section>
+
+
+    <!-- Part 3: Search Bar and assets -->
+    <main>
+        <div class="search-box">
+            <div class="search-section">
+                <input type="search" class="search-input" placeholder="Search the website..." />
+            </div>
+            <div class="select-section">
+                <div class="select-filter">
+                    <label class="sort-label" for="sort">Sort by:</label>
+                    <select class="sort-select" name="sort" id="sort">
+                        <option value="default">Default</option>
+                        <option value="name">Name</option>
+                        <option value="author">Author</option>
+                    </select>
+                </div>
+                <div class="select-filter">
+                    <label class="filter-label" for="filter">Filter by:</label>
+                    <select class="filter-select" name="filter" id="filter">
+                        <option value="default">Default</option>
+                        <option value="name">Name</option>
+                        <option value="author">Author</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <!--------------------------Part4:cards---------------------->
+
+        <div class="topics-title" style="margin: 20px">
+            "24" Web Topics Found
+        </div>
+        <div class="cards-container">
+
+            <div class="row">
+
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/html.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">HTML</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+
+                </a>
+
+
+
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/css.webp" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">CSS</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style=" font-size:20px; "></span>
+                            <span class="fa fa-star checked" style=" font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/javascript.jpg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">JavaScript</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/angular.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Angular</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+
+
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/devops.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Devops</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+            </div>
+
+            <!--row 2-->
+            <div class="row">
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/react.webp" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">React</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/vuejs.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Vue</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/jquery.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">JQuery</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/json.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">json</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/seo.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">SEO</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+            </div>
+            <!--row 3-->
+            <div class="row">
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/django.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Django</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/flask.webp" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Flask</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/sql.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">SQL</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/sql.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">NoSql</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/ajax.gif" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Ajax</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+            </div>
+            <!--row 4-->
+            <div class="row">
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/wai.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Wai</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/ruby.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Ruby</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/responsive.gif" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Responsive</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/restapi.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">RestApi</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/web-security.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">web-security</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+            </div>
+            <!--row 5-->
+            <div class="row">
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/websockets.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Websocket</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/accessibility.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Accessability</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image ">
+                        <img src="./assets/analytics.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Analytics</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/ci-cd.jpeg" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Ci-Cd</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+                <a href="./details.html" class="card" style="width: 16rem;">
+                    <div class="topic-image">
+                        <img src="./assets/docker.png" class="card-img-top">
+                    </div>
+                    <div class="card-content">
+                        <div class="topic-name">Web Development Languages</div>
+                        <div class="course-title">Docker</div>
+                        <div class="stars">
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star checked" style="color:#e29323; font-size:20px; "></span>
+                            <span class="fa fa-star unchecked" style="font-size:20px;"></span>
+
+
+                        </div>
+                        <div class="Auth">Author: Sarah Smith</div>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <!--part 5-->
+    <section id="favourite-container">
+        <div class="fav-title">My Favourite Topics</div>
+        <div class="fav-cards-container">
+            <div class="card" style="height: 7rem; width:7rem;">
+                <div class="fav-img">
+                    <img src="./assets/react.webp" alt="cloud" class="card-img-top" style="height:4rem ;">
+                </div>
+                <div class="card-content">
+                    <div class="fav-topic" style="font-size:.75rem ; margin: 5px;">React</div>
+                    <div class="stars">
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star unchecked" style="font-size:12px;"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card" style="height: 7rem; width:7rem;">
+                <div class="fav-img">
+                    <img src="./assets/cloud.jpeg" alt="cloud" class="card-img-top" style="height:4rem ;">
+                </div>
+                <div class="card-content">
+                    <div class="fav-topic" style="font-size:.75rem ;  margin: 5px;">Cloud Computing</div>
+                    <div class="stars">
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star checked" style="color:#e29323; font-size:12px; "></span>
+                        <span class="fa fa-star unchecked" style="font-size:12px; "></span>
+                        <span class="fa fa-star unchecked" style="font-size:12px;"></span>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Part 6-->
+    <footer>
+        <div class="Developed">Developed with <i class="fa fa-heart" style="color: red;"></i> <i class="fa fa-globe">
+            </i>
+            2023</div>
+    </footer>
+</body>
+
+</html>
