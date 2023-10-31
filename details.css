@@ -110,7 +110,7 @@ header .button-container button .icon.heart-icon {
   top: 0;
 }
 
-/* Styles for .left triangle */
+
 .blue-left {
   position: absolute;
   width: 95vw;
@@ -124,7 +124,7 @@ header .button-container button .icon.heart-icon {
 
 }
 
-/* Styles for .right triangle */
+
 .green-right {
   position: absolute;
   width: 90vw;
@@ -141,9 +141,11 @@ header .button-container button .icon.heart-icon {
 
 
 .details-topic {
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.893);
-  position: fixed;
+
+  background-color: black;
+  color: white;
+  display: flex;
+  position: relative;
 }
 
 .details-topic.topic-definition {
@@ -158,6 +160,7 @@ header .button-container button .icon.heart-icon {
 
 .details-topic.topic-definition h1 {
   padding: 3px 0;
+
   color: white;
 }
 
@@ -181,10 +184,11 @@ header .button-container button .icon.heart-icon {
 }
 
 .details-topic.recomand-card .recomand-image {
-  background-image: url(./assets/cross-browser.jpeg);
+  background-image: url(./assets/angular.png);
   width: 300px;
   height: 170px;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .details-topic.recomand-card .author {
@@ -231,8 +235,8 @@ header .button-container button .icon.heart-icon {
 }
 
 .details-topic.recomand-card .favorite-container button .icon {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .details-topic.recomand-card .favorite-container.unlimited-credits {
@@ -241,35 +245,36 @@ header .button-container button .icon.heart-icon {
   color: #dddddd;
 }
 
-.Html-topics {
+.s-topics {
   background-color: var(--bg_body);
   padding: 40px 250px;
   min-height: calc(100vh - 458px);
 }
 
-.Html-topics-list {
+.s-topics-list {
   border: 1px solid var(--lines-color);
   width: fit-content;
   background-color: var(--bg_default);
 }
 
-.Html-topics-list h1 {
+.s-topics-list h1 {
   padding: 20px 120px 20px 20px;
 }
 
-.Html-topics-list .sub-topic {
+.s-topics-list .sub-topic {
   display: flex;
+  flex-shrink: 0;
   gap: 15px;
   padding: 20px 120px 20px 20px;
   border-top: 1px solid var(--lines-color);
 }
 
-.Html-topics-list .sub-topic div {
-  font-size: 15px;
+.s-topics-list .sub-topic div {
+  font-size: 16px;
   font-weight: 700;
 }
 
-.Html-topics-list .sub-topic .icon {
+.s-topics-list .sub-topic .icon {
   width: 25px;
   height: 25px;
 }
@@ -319,128 +324,51 @@ footer {
 }
 
 
-/* responsive styles */
-@media screen and (max-width: 1024px) {
-  .details-topic.recomand-card {
-    top: 35px;
-    right: 50px;
-  }
-
-  .details-topic.topic-definition {
-    padding: 25px 0 25px 50px;
-  }
-
-  .sub-topics-section {
-    padding: 40px 50px;
-  }
-}
-
-@media screen and (max-width: 768px) {
+/*----------------------responsive---------------*/
+@media (max-width: 768px) {
   header {
-    padding: 15px 20px;
-  }
-
-  header .icon-title {
-    display: none;
-  }
-
-  .details-topic.recomand-card {
-    position: static;
-    width: auto;
-  }
-
-  .details-topic.topic-definition {
-    padding: 15px 0 15px 50px;
-    width: 80%;
-  }
-
-  .sub-topics-section {
-    padding: 40px 20px;
-  }
-
-  .sub-topics-list h1 {
-    font-size: 20px;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 10px;
   }
 
-  .sub-topics-list .sub-topic {
-    gap: 10px;
-    padding: 10px;
+  .Title {
+    font-size: 24px;
+    padding-top: 5px;
   }
 
-  .sub-topics-list .sub-topic div {
-    font-size: var(--subtitle-font-size);
+  header .button-container {
+    margin-top: 10px;
   }
 
-  .sub-topics-list .sub-topic .icon {
-    width: 15px;
-    height: 15px;
+  header .button-container button {
+    padding: 5px 8px;
   }
 
-  .details-topic {
-    padding: 40px 20px;
+  header .button-container button .icon {
+    width: 12px;
+    height: 12px;
   }
 
-  .details-topic.topic-definition {
-    padding: 0;
-    padding-bottom: 40px;
-    width: auto;
+
+  .Triangle-Tittle {
+    padding: 0 10px;
+    /* Reduce padding for smaller screens */
   }
 
-  .details-topic.topic-definition .subtitle {
-    font-size: 13px;
-    margin-top: 0;
+  .center-text {
+    margin-top: 10px;
+    /* Reduce margin for smaller screens */
   }
 
-  .details-topic.topic-definition h1 {
-    font-size: 25px;
+  .Triangle-Tittle .main-tit {
+    font-size: 16px;
+    /* Reduce font size for smaller screens */
   }
 
-  .details-topic.topic-definition .review svg {
-    width: 15px;
-    height: 15px;
-  }
-
-  .details-topic.topic-definition p {
-    padding-top: 20px;
+  .Triangle-Tittle .sub-tit {
     font-size: 14px;
+    /* Reduce font size for smaller screens */
   }
 
-  .page-heading-container .page-heading-wrapper {
-    padding: 20px 0px;
-    margin-top: 15px;
-  }
-
-  .page-heading-container .main-title {
-    font-size: 25px;
-  }
-
-  .page-heading-container .subtitle {
-    font-size: var(--subtitle-font-size);
-  }
-
-  .page-heading-container .triangle .blue-triangle,
-  .page-heading-container .triangle .green-triangle {
-    height: 30px;
-  }
-
-  .details-topic.recomand-card .topic-image {
-    width: auto;
-    height: 200px;
-    background-size: cover;
-  }
-
-  .details-topic.recomand-card .favorite-containerbutton {
-    margin: 10px auto;
-  }
-
-  .sub-topics-list {
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .details-topic.recomand-card .favorite-containerbutton .button-text {
-    font-size: 18px;
-  }
 }
